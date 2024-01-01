@@ -90,6 +90,6 @@ body{
 .win-animation{
   font-size: 25vh;
   position: fixed;
-  bottom: 0px;
+  bottom: 32%;
   filter: opacity(80%);
 }
