@@ -9,6 +9,8 @@ const turnPlayer = document.querySelector(".turn-player");
 let turn = true;
 
 resetGame.addEventListener("click", () => {
+tieSound.pause();
+  tieSound.currentTime = 0;
   winnerAnimation.innerHTML = ``;
     boxes.forEach((box) => {
         box.innerHTML = "";
@@ -81,7 +83,7 @@ function checkWin(){
     
     if (tie) {
         winnerAnimation.innerHTML = "😶";
-         tingSound.play();
+         tieSound.play();
     } else if (!turn) {
         turnPlayer.innerHTML = "Turn : ⭕";
         tingSound.play();
